@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MedBaseApp.Models.User>
+@{
+    ViewData["Title"] = "User profile";
+    Layout = "_LayoutVer2";
+}                                    
+<a asp-action="Createhospital" asp-controller="Home">Createhospital</a>
+<h3>Admin profile</h3>
+
+    
+    @foreach (var user1 in Model.Where(p => p.Email == User.Identity.Name))
+    {
+        
+            <h6>User Email :@user1.Email</h6>
+            <br>
+            <h6>User First Name :@user1.FistName</h6>
+            <br>
+            <h6>User Last Name : @user1.LastName</h6>
+
+        
+    }

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MedBaseApp.Models.Hospital>
+
+@{
+    ViewBag.Title = "Create hospitals";
+}
+<form asp-action="Create" asp-controller="Home" method="post" enctype="multipart/form-data">
+
+    
+    <p>
+        <label>Hospital name</label>
+        <input name="HospitalName" class="form-control" />
+    </p>
+    <p>
+        <label>Hospital Image</label>
+        <input name="HospitalImage" type="file" class="form-control" />
+    </p>
+    <p>
+        <input type="submit" value="Add" />
+    </p>
+</form>
+
